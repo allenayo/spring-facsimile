@@ -15,10 +15,15 @@ public class BeanFactoryTest {
         BeanDefinition beanDefinition = new BeanDefinition();
         beanDefinition.setBeanClassName("com.cjp.UserService");
 
-        // 3. 注册Bean
+        // 3. 注入属性
+        PropertyValues propertyValues = new PropertyValues();
+        propertyValues.addPropertyValue(new PropertyValue("name", "Ronaldo"));
+        beanDefinition.setPropertyValues(propertyValues);
+
+        // 4. 注册Bean
         beanFactory.registerBeanDefinition("userService", beanDefinition);
 
-        // 4. 获取Bean
+        // 5. 获取Bean
         UserService userService = (UserService) beanFactory.getBean("userService");
         userService.sayHello();
     }
