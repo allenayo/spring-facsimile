@@ -2,6 +2,7 @@ package com.cjp.xml;
 
 import com.cjp.AbstractBeanDefinitionReader;
 import com.cjp.BeanDefinition;
+import com.cjp.BeanReference;
 import com.cjp.PropertyValue;
 import com.cjp.io.ResourceLoader;
 import org.w3c.dom.Document;
@@ -66,7 +67,16 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 Element e = (Element) item;
                 String name = e.getAttribute("name");
                 String value = e.getAttribute("value");
-                beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                if (value != null && value.length() > 0) {
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                } else {
+                    String ref = e.getAttribute("ref");
+                    if (ref == null || ref.length() == 0) {
+                        throw new IllegalArgumentException("Configuration error: <property> element for property '" + name + "' must specify a ref or value");
+                    }
+                    BeanReference beanReference = new BeanReference(ref);
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, beanReference));
+                }
             }
         }
     }

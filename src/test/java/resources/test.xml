@@ -6,6 +6,11 @@
 
     <bean name="userService" class="com.cjp.UserService">
         <property name="name" value="Ronaldo"/>
+        <property name="employeeService" ref="employeeService"/>
+    </bean>
+
+    <bean name="employeeService" class="com.cjp.EmployeeService">
+        <property name="userService" ref="userService"/>
     </bean>
 
 </beans>
