@@ -1,4 +1,4 @@
-package com.cjp;
+package com.cjp.beans;
 
 import java.util.ArrayList;
 import java.util.List;

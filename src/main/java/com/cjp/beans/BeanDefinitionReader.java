@@ -1,4 +1,4 @@
-package com.cjp;
+package com.cjp.beans;
 
 public interface BeanDefinitionReader {
 

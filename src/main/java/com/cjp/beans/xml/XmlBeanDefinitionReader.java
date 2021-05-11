@@ -1,10 +1,10 @@
-package com.cjp.xml;
+package com.cjp.beans.xml;
 
-import com.cjp.AbstractBeanDefinitionReader;
-import com.cjp.BeanDefinition;
-import com.cjp.BeanReference;
-import com.cjp.PropertyValue;
-import com.cjp.io.ResourceLoader;
+import com.cjp.beans.AbstractBeanDefinitionReader;
+import com.cjp.beans.BeanDefinition;
+import com.cjp.beans.BeanReference;
+import com.cjp.beans.PropertyValue;
+import com.cjp.beans.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

@@ -1,7 +1,7 @@
-package com.cjp.xml;
+package com.cjp.beans.xml;
 
-import com.cjp.BeanDefinition;
-import com.cjp.io.ResourceLoader;
+import com.cjp.beans.BeanDefinition;
+import com.cjp.beans.io.ResourceLoader;
 import org.junit.Assert;
 import org.junit.Test;
 

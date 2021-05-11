@@ -1,10 +1,11 @@
-package com.cjp;
+package com.cjp.beans;
 
-import com.cjp.factory.AbstractBeanFactory;
-import com.cjp.factory.AutowireCapableBeanFactory;
-import com.cjp.factory.BeanFactory;
-import com.cjp.io.ResourceLoader;
-import com.cjp.xml.XmlBeanDefinitionReader;
+import com.cjp.UserService;
+import com.cjp.beans.factory.AbstractBeanFactory;
+import com.cjp.beans.factory.AutowireCapableBeanFactory;
+import com.cjp.beans.factory.BeanFactory;
+import com.cjp.beans.io.ResourceLoader;
+import com.cjp.beans.xml.XmlBeanDefinitionReader;
 import org.junit.Test;
 
 import java.util.Map;
@@ -18,7 +19,7 @@ public class BeanFactoryTest {
         xmlBeanDefinitionReader.loadBeanDefinitions("test.xml");
 
         // 2. 初始化BeanFactory
-        BeanFactory beanFactory = new AutowireCapableBeanFactory();
+        AbstractBeanFactory beanFactory = new AutowireCapableBeanFactory();
 
         // 3. 注册Bean
         for (Map.Entry<String, BeanDefinition> entry : xmlBeanDefinitionReader.getRegistry().entrySet()) {

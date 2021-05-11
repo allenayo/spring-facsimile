@@ -1,6 +1,6 @@
-package com.cjp;
+package com.cjp.beans;
 
-import com.cjp.io.ResourceLoader;
+import com.cjp.beans.io.ResourceLoader;
 
 import java.util.HashMap;
 import java.util.Map;

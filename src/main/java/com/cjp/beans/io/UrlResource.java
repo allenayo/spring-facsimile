@@ -1,4 +1,4 @@
-package com.cjp.io;
+package com.cjp.beans.io;
 
 import java.io.IOException;
 import java.io.InputStream;

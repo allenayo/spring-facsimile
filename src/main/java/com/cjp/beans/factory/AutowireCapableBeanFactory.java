@@ -1,8 +1,8 @@
-package com.cjp.factory;
+package com.cjp.beans.factory;
 
-import com.cjp.BeanDefinition;
-import com.cjp.BeanReference;
-import com.cjp.PropertyValue;
+import com.cjp.beans.BeanDefinition;
+import com.cjp.beans.BeanReference;
+import com.cjp.beans.PropertyValue;
 
 import java.lang.reflect.Field;
 

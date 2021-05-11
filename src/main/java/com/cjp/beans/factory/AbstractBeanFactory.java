@@ -1,6 +1,6 @@
-package com.cjp.factory;
+package com.cjp.beans.factory;
 
-import com.cjp.BeanDefinition;
+import com.cjp.beans.BeanDefinition;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,7 +27,6 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         return bean;
     }
 
-    @Override
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception {
         beanDefinitionMap.put(name, beanDefinition);
         beanDefinitionNames.add(name);
